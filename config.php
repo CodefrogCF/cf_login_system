@@ -1,9 +1,14 @@
 <?php
 
-$host = "webspace34.do.de";
-$user = "web33";
-$password = "g3Mp,=KH69+a";
-$database = "usr_web33_2";
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$host = $_ENV['SQL_HOST'];
+$user = $_ENV['SQL_USER'];
+$password = $_ENV['SQL_PASSWORD'];
+$database = $_ENV['SQL_DATABASE'];
 
 $conn = new mysqli($host, $user, $password, $database);
 
