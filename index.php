@@ -47,7 +47,7 @@ function isActiveForm($formName, $activeForm) {
                 <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="password" required>
                 <button type="submit" name="login">Login</button>
-                <p>Don't have an account? <a href="" onclick="showForm('register-form')">Sign Up</a></p>
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="showForm('register-form')">Sign Up</a></p>
             </form>
         </div>
 
@@ -65,7 +65,7 @@ function isActiveForm($formName, $activeForm) {
                     <option value="admin">Admin</option>
                 </select>
                 <button type="submit" name="register">Register</button>
-                <p>Already have an account? <a href="" onclick="showForm('login-form')">Login</a></p>
+                <p>Already have an account? <a href="javascript:void(0);" onclick="showForm('login-form')">Login</a></p>
             </form>
         </div>
 

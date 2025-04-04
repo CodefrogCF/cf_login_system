@@ -13,12 +13,16 @@ if (isset($_POST['register'])) {
     if ($checkEmail->num_rows > 0) {
         $_SESSION['register-error'] = "Email already registered!";
         $_SESSION['active_form'] = 'register';
+        header("Location: index.php");
+        exit();
     } else {
         $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')");
+        $_SESSION['name'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['active_form'] = 'login';
+        header("Location: index.php");
+        exit();
     }
-
-    header("Location: index.php");
-    exit();
 }
 
 if (isset($_POST['login'])) {
