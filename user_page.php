@@ -23,8 +23,8 @@ if (!isset($_SESSION['email'])) {
 <body>
 
     <div class="header">
-        <a href="#"><img src="./assets/images/logo-192x192.webp" class="logo"></a>
-        <a href="#"><h1>LoginForm</h1></a>
+        <a href=""><img src="./assets/images/logo-192x192.webp" class="logo"></a>
+        <a href=""><h1>LoginForm</h1></a>
     </div>
 
     <div class="container">
